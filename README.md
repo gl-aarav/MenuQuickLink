@@ -53,58 +53,6 @@ cp MenuQuickLink MenuQuickLink.app/Contents/MacOS/
 
 Your bookmarks are stored locally in UserDefaults and persist between app launches. No cloud sync, no tracking.
 
-## Building from Source
-
-### Prerequisites
-- Swift 5.5+
-- macOS 11.0+
-
-### Build Steps
-```bash
-git clone https://github.com/gl-aarav/MenuQuickLink.git
-cd MenuQuickLink
-swiftc -parse-as-library main.swift -o MenuQuickLink -framework Cocoa -framework SwiftUI
-mkdir -p MenuQuickLink.app/Contents/MacOS
-cp MenuQuickLink MenuQuickLink.app/Contents/MacOS/
-./scripts/create_dmg.sh
-```
-
-## File Structure
-
-```
-MenuQuickLink/
-├── main.swift          # Complete app source code
-├── scripts/
-│   └── create_dmg.sh  # DMG creation script
-├── MenuQuickLink.app/  # Compiled application bundle
-├── MenuQuickLink.dmg   # Installer file (app + Applications shortcut)
-└── README.md           # This file
-```
-
-## Source Code Usage
-
-This source code is provided for educational and reference purposes only. You are welcome to view, study, and learn from the code, but you may not:
-
-- Redistribute the source code or compiled application as your own
-- Use this code to create a competing product or service
-- Remove or modify copyright notices
-- Use this code for commercial purposes without explicit written permission
-
-For permissions or inquiries, please contact Aarav Goyal directly.
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or pull requests.
-
-## Future Enhancements
-
-- [ ] Edit existing links
-- [ ] Categorize links into folders
-- [ ] Import/Export bookmarks
-- [ ] Custom menu bar icon
-- [ ] Website preview on hover
-- [ ] Search functionality
-
 ## Support
 
 For issues, questions, or suggestions, please open an [issue](https://github.com/gl-aarav/MenuQuickLink/issues) on GitHub.

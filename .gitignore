@@ -3,7 +3,10 @@
 MenuQuickLink
 build/
 .DS_Store
-*.swift
+# DMG files generated for distribution
+*.dmg
+# Scripts used for building/packaging – not source code
+scripts/
 
 # Xcode
 *.xcodeproj
@@ -36,3 +39,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+scripts/create_dmg.sh
+main.swift
+scripts/create_dmg.sh
