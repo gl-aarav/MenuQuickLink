@@ -3,6 +3,7 @@
 MenuQuickLink
 build/
 .DS_Store
+main.swift
 
 # Xcode
 *.xcodeproj
