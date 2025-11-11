@@ -1,6 +1,6 @@
 # Build artifacts
 *.app/
-MenuBarApp
+MenuQuickLink
 build/
 .DS_Store
 

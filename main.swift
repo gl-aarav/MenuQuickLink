@@ -1,8 +1,13 @@
+// MenuQuickLink - © 2025 Aarav Goyal
+// This source code is provided for educational and reference purposes only.
+// Unauthorized reproduction, redistribution, or commercial use of this code is prohibited.
+// For permissions, contact: Aarav Goyal
+
 import SwiftUI
 import AppKit
 
 @main
-struct MenuBarApp: App {
+struct MenuQuickLink: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
@@ -17,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var popover: NSPopover?
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.accessory)
+        // Hide the app from dock - only show in menu bar
+        NSApp.setActivationPolicy(.prohibited)
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         

@@ -1,9 +1,8 @@
-# Menu Bar App
+# MenuQuickLink
 
 A lightweight macOS menu bar application that lets you quickly access your favorite websites from the menu bar.
 
 ![Screenshot](https://img.shields.io/badge/macOS-11.0+-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Features
 
@@ -17,16 +16,23 @@ A lightweight macOS menu bar application that lets you quickly access your favor
 ## Installation
 
 ### Option 1: DMG Installer
-1. Download the latest `MenuBarApp.dmg` from [Releases](https://github.com/yourusername/MenuBarApp/releases)
+1. Download the latest `MenuQuickLink.dmg` from [Releases](https://github.com/gl-aarav/MenuQuickLink/releases)
 2. Open the DMG file
-3. Drag MenuBarApp to your Applications folder
+3. Drag `MenuQuickLink` to the Applications folder
 4. Launch from Applications or Spotlight (Cmd + Space)
 
 ### Option 2: Direct Build
 1. Clone the repository
-2. Compile: `swiftc -parse-as-library main.swift -o MenuBarApp -framework Cocoa -framework SwiftUI`
-3. Create app bundle: `mkdir -p MenuBarApp.app/Contents/MacOS && cp MenuBarApp MenuBarApp.app/Contents/MacOS/`
-4. Copy to Applications: `cp -r MenuBarApp.app ~/Applications/`
+2. Compile:
+```bash
+swiftc -parse-as-library main.swift -o MenuQuickLink -framework Cocoa -framework SwiftUI
+```
+3. Create app bundle and run DMG creation script:
+```bash
+mkdir -p MenuQuickLink.app/Contents/MacOS
+cp MenuQuickLink MenuQuickLink.app/Contents/MacOS/
+./scripts/create_dmg.sh
+```
 
 ## Usage
 
@@ -50,32 +56,41 @@ Your bookmarks are stored locally in UserDefaults and persist between app launch
 ## Building from Source
 
 ### Prerequisites
-- Swift 6.0+
+- Swift 5.5+
 - macOS 11.0+
 
 ### Build Steps
 ```bash
-git clone https://github.com/yourusername/MenuBarApp.git
-cd MenuBarApp
-swiftc -parse-as-library main.swift -o MenuBarApp -framework Cocoa -framework SwiftUI
-mkdir -p MenuBarApp.app/Contents/MacOS
-cp MenuBarApp MenuBarApp.app/Contents/MacOS/
+git clone https://github.com/gl-aarav/MenuQuickLink.git
+cd MenuQuickLink
+swiftc -parse-as-library main.swift -o MenuQuickLink -framework Cocoa -framework SwiftUI
+mkdir -p MenuQuickLink.app/Contents/MacOS
+cp MenuQuickLink MenuQuickLink.app/Contents/MacOS/
+./scripts/create_dmg.sh
 ```
 
 ## File Structure
 
 ```
-MenuBarApp/
+MenuQuickLink/
 ├── main.swift          # Complete app source code
-├── MenuBarApp.app/     # Compiled application bundle
-├── MenuBarApp.dmg      # Installer file
-├── README.md           # This file
-└── LICENSE             # MIT License
+├── scripts/
+│   └── create_dmg.sh  # DMG creation script
+├── MenuQuickLink.app/  # Compiled application bundle
+├── MenuQuickLink.dmg   # Installer file (app + Applications shortcut)
+└── README.md           # This file
 ```
 
-## License
+## Source Code Usage
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This source code is provided for educational and reference purposes only. You are welcome to view, study, and learn from the code, but you may not:
+
+- Redistribute the source code or compiled application as your own
+- Use this code to create a competing product or service
+- Remove or modify copyright notices
+- Use this code for commercial purposes without explicit written permission
+
+For permissions or inquiries, please contact Aarav Goyal directly.
 
 ## Contributing
 
@@ -92,7 +107,7 @@ Contributions are welcome! Feel free to open issues or pull requests.
 
 ## Support
 
-For issues, questions, or suggestions, please open an [issue](https://github.com/yourusername/MenuBarApp/issues) on GitHub.
+For issues, questions, or suggestions, please open an [issue](https://github.com/gl-aarav/MenuQuickLink/issues) on GitHub.
 
 ---
 
